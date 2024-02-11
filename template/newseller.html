@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Registration</title>
+    <style>body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+    }
+    
+    header {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    main {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 20px;
+    }
+    
+    label {
+        display: block;
+        font-weight: bold;
+    }
+    
+    input[type="text"],
+    textarea,
+    input[type="number"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    button {
+        padding: 10px 20px;
+        background-color: #333;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #555;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Seller Registration</h1>
+    </header>
+    <main>
+        <form id="productForm" action="http://127.0.0.1:5000/newshop" method="POST">
+            <div class="form-group">
+                <label for="productName">Name:</label>
+                <input type="text" id="productName" name="productName" required>
+            </div>
+            <div class="form-group">
+                <label for="productDescription">Shop location:</label>
+                <textarea id="productDescription" name="productDescription" required></textarea>
+            </div>
+            <div class="form group">
+            <label for="password">PASSWORD:</label>
+            <input type="password" name="password" required>
+            </div>
+            <div class="form group">
+                <label for="coordinates">COORDINATES:</label>
+                <input type="numbers" name="coordinates" required>
+                </div>
+            <div class="form group">
+                <label for="Contact">Contact:</label>
+                <input type="numbers" name="contact" required>
+                </div>
+            <br>
+            <br>
+            <div class="form-group">
+                <label for="productPrice">SUBSCRIPTION TIME:</label>
+                <input type="date" id="date" name="date" min="0" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

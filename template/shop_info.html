@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Information</title>
+</head>
+<body>
+    <h1>Shop Information</h1>
+    <table>
+        <tr>
+            <th>Shop Name</th>
+            <th>Address</th>
+            <th>Contact</th>
+            <th>Rating</th>
+            <th>Price</th>
+            <th>Quantity</th>
+        </tr>
+        {% for shop in shop_info %}
+        <tr>
+            <td>{{ shop[0] }}</td>
+            <td>{{ shop[1] }}</td>
+            <td>{{ shop[2] }}</td>
+            <td>{{ shop[3] }}</td>
+            <td>{{ shop[4] }}</td>
+            <td>{{ shop[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
